@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Weather app</title>
+    <meta charset="UTF-8" />
+    <meta name="weather-app" content="width=device-width", initial-scale=1.0 />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="src/styles.css" />
+
+  </head>
+
+  <body>
+    <div class="container main-box">
+        <form class="hstack gap-3 enter-city" id="search-form">
+          <input class="form-control me-auto inner-input" id="search-city" type="text" autofocus="on" autocomplete="off"  placeholder="Choose a city" >
+          <button type="button" class="btn btn-outline-primary btn-sm shadow-sm search-button" id="search">Search</button>
+          <button type="button" class="btn btn-outline-dark btn-sm shadow-sm current" id="current-city">Current</button>
+        </form>
+        <div class="row  weather-more" >
+  
+          <div class="col-4 "> <span class="detail-line">Feels like</span>  <br> <span class="feels-like" id="feels-like"></span> <span class="temp-dot">°</span></div>
+          <div class="col-4"> <span class="detail-line"> Wind</span>  <br> <span id="wind"></span> <small> mph</small>
+            </div>
+          <div class="col-4 my-city">
+            <span id="city"></span>, <span id="country"></span>
+             <br>
+              <span id="current-date"></span> <br>
+              <span id="description">Partly Cloudy</span> <br>
+              <span class="denver-sun">🌤 <br></span>
+              <span class="temprature-denver">
+               <span id="current-temp"></span> <a href="#"><span id="c-temp">°C</span></a> | <a href="#"><span id="f-temp">°F</span> </a>
+              </span>           
+      </div>    
+        </div>
+        <section >
+            <div class="row row-cols-5">
+              <div class="col">Thu</div>
+              <div class="col">Fri</div>
+              <div class="col">Sat</div>
+              <div class="col">Sun</div>
+              <div class="col">Mon</div>
+            </div>
+            <div class="row row-cols-5">
+                <div class="col emoji">☀️</div>
+                <div class="col emoji">🌥</div>
+                <div class="col emoji">☁️</div>
+                <div class="col emoji">🌩</div>
+                <div class="col emoji">🌧</div>
+              </div>
+              <div class="row row-cols-5">
+                  <div class="col ">19° 24°</div>
+                  <div class="col ">18° 23°</div>
+                  <div class="col ">18° 23°</div>
+                  <div class="col ">17° 22°</div>
+                  <div class="col ">16° 21°</div>
+                </div>
+        </section>
+          </div>
+      </div>
+      </div>
+  
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>

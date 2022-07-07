@@ -1,0 +1,103 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+}
+
+.main-box {
+  border: 1px solid grey;
+  max-width: 600px;
+  margin: 25px 20px;
+  padding: 35px;
+  background: url("../media/nature-background.jpg");
+  background-size: 1200px;
+}
+.enter-city {
+  position: relative;
+  margin-top: 20px;
+  max-width: 450px;
+  min-width: 350px;
+  height: 40px;
+}
+
+.inner-input {
+  background-color: #f0fbff;
+  border-color: #6c96bc;
+  position: relative;
+}
+
+.search-button {
+  position: relative;
+  box-sizing: border-box;
+  right: 80px;
+  color: #38729f;
+  border-color: #8bb0c0;
+  background-color: #fafafa;
+  transition: all 150ms solid;
+}
+.search-button:hover {
+  background: #718393;
+}
+.detail-line {
+  text-decoration: underline #25527a;
+}
+.feels-like {
+  position: relative;
+  left: 27px;
+}
+.temp-dot {
+  position: relative;
+  left: 30px;
+}
+
+.current {
+  position: relative;
+  left: -80px;
+  background: #d7d1b9;
+  border-style: none;
+}
+.current:hover {
+  transition: all 150ms solid;
+  background: #347474;
+}
+
+.denver-sun {
+  position: relative;
+  top: 15px;
+  font-size: 30px;
+}
+#current-temp {
+  max-width: 20px;
+  min-width: 10px;
+}
+/* #c-temp {
+  text-decoration: none;
+}
+#c-temp:hover,
+#f-temp:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+#c-temp:active,
+#f-temp:active {
+  text-decoration: none;
+  cursor: pointer;
+} */
+
+.temprature-denver {
+  position: relative;
+  top: -20px;
+  left: 50px;
+}
+
+.weather-more {
+  margin: 40px -10px;
+}
+section {
+  color: #f0fbff;
+}
+.emoji {
+  font-size: 30px;
+}
