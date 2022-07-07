@@ -3,7 +3,6 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 0;
-  text-transform: capitalize;
 }
 
 .main-box {
@@ -13,6 +12,7 @@ body {
   padding: 35px;
   background: url("../media/nature-background.jpg");
   background-size: 1200px;
+  text-transform: capitalize;
 }
 .enter-city {
   position: relative;
