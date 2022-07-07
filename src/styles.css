@@ -8,7 +8,7 @@ body {
 .main-box {
   border: 1px solid grey;
   max-width: 600px;
-  margin: 25px 20px;
+  margin: 30px auto;
   padding: 35px;
   background: url("../media/nature-background.jpg");
   background-size: 1200px;
@@ -62,39 +62,33 @@ body {
   transition: all 150ms solid;
   background: #347474;
 }
-
-.denver-sun {
-  position: relative;
-  top: 15px;
-  font-size: 30px;
-}
-#current-temp {
-  max-width: 20px;
-  min-width: 10px;
-}
-/* #c-temp {
-  text-decoration: none;
-}
-#c-temp:hover,
-#f-temp:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-#c-temp:active,
-#f-temp:active {
-  text-decoration: none;
-  cursor: pointer;
-} */
-
-.temprature-denver {
-  position: relative;
-  top: -20px;
-  left: 50px;
-}
-
 .weather-more {
   margin: 40px -10px;
 }
+
+.denver-sun {
+  position: relative;
+  font-size: 64px;
+  margin-right: 20px;
+  height: 1;
+  width: 64px;
+}
+#current-temp {
+  position: relative;
+  font-size: 54px;
+  top: -4px;
+  margin-left: 1px;
+  line-height: 1;
+  font-weight: 400;
+  color: black;
+}
+
+.temprature-denver .units {
+  position: relative;
+  top: -30px;
+  left: -4px;
+}
+
 section {
   color: #f0fbff;
 }
@@ -105,7 +99,7 @@ section {
   width: 60px;
   border-radius: 50%;
   max-width: 600px;
-  margin: 25px 300px;
+  margin: 30px auto;
   display: block;
   text-align: center;
 }
@@ -114,5 +108,5 @@ section {
   text-align: center;
   font-size: smaller;
   max-width: 600px;
-  margin: 25px 20px;
+  margin: 30px auto;
 }
