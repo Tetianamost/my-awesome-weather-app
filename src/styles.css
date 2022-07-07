@@ -102,11 +102,10 @@ section {
   font-size: 30px;
 }
 .my-image {
+  display: block;
   width: 100px;
   border-radius: 50%;
 }
 .coded-by {
-  display: block;
-  text-align: center;
   font-size: smaller;
 }
