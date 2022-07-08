@@ -17,6 +17,26 @@ function formatDate(date) {
   });
   return `${currentDay} ${amPM}`;
 }
+function showForecast() {
+  let forecast = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+              <div class="weather-forecast-date">${day}</div>
+                <img  src="http://openweathermap.org/img/wn/01d@2x.png" alt="" width="42"/>
+                 <div class="weather-forecast-temp">
+                  <span class="weather-forecast-temp-max">19°</span><span class="weather-forecast-temp-min"> 24°</span>
+  </div>
+  </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecast.innerHTML = forecastHTML;
+}
 
 function showTemp(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -102,5 +122,7 @@ cLink.addEventListener("click", convertToCelcius);
 
 let fLink = document.querySelector("#f-temp");
 fLink.addEventListener("click", convertToFahrenheit);
+
+showForecast();
 
 searchCity("Denver");
