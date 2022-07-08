@@ -87,6 +87,7 @@ body {
 }
 .weather-more {
   margin: 40px -10px;
+  font-size: large;
 }
 section {
   color: #f0fbff;
