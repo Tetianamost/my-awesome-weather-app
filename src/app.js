@@ -49,7 +49,7 @@ function locateMe(position) {
   let lon = position.coords.longitude;
   let lat = position.coords.latitude;
   let apiKey = "b20f16c775f1a540c9b26a281882d55c";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemp);
 }
 function callLocateMe(event) {
@@ -58,7 +58,7 @@ function callLocateMe(event) {
 }
 function searchCity(city) {
   let apiKey = "b20f16c775f1a540c9b26a281882d55c";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemp);
 }
 function searchLocation(event) {
@@ -69,13 +69,17 @@ function searchLocation(event) {
 function convertToCelcius(event) {
   event.preventDefault();
   let celcius = document.querySelector("#current-temp");
+  cLink.classList.add("active");
+  fLink.classList.remove("active");
   let temp = celcius.innerHTML;
   temp = Number(temp);
-  celcius.innerHTML = "23";
+  celcius.innerHTML = Math.round(celciusTemp);
 }
 function convertToFahrenheit(event) {
   event.preventDefault();
   let fahrenheit = document.querySelector("#current-temp");
+  cLink.classList.remove("active");
+  fLink.classList.add("active");
   let temp = fahrenheit.innerHTML;
   temp = Number(temp);
   fahrenheit.innerHTML = Math.round((celciusTemp * 9) / 5 + 32);

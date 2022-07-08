@@ -7,6 +7,9 @@ body {
 li {
   list-style: none;
 }
+a {
+  text-decoration: none;
+}
 li::first-letter {
   text-transform: capitalize;
 }
@@ -77,39 +80,43 @@ li::first-letter {
 }
 .city-country {
   font-size: 24px;
-  font-weight: bolder;
+  font-weight: 540;
 }
 #current-date {
   font-size: 20px;
-  font-weight: bolder;
+  font-weight: 530;
 }
 .weather-more {
   margin: 40px -10px;
-  /* font-size: large; */
 }
 #icon {
   position: relative;
-  left: -23px;
-  width: 75px;
+  left: -37px;
+  width: 78px;
 }
 #current-temp {
-  max-width: 20px;
-  min-width: 10px;
-  font-size: 29px;
-  font-weight: bolder;
+  position: relative;
+  left: -52px;
+  top: 8px;
+  font-size: 36px;
+  font-weight: 450;
 }
 
-.temprature-denver {
-  position: relative;
-  top: 6px;
-  left: -30px;
-}
 .weather-units {
   position: relative;
   font-size: 12px;
+  font-weight: bold;
   top: -11px;
+  left: -58px;
+  min-width: fit-content;
 }
-
+.active {
+  cursor: default;
+  color: rgb(33, 33, 33);
+}
+.active:hover {
+  text-decoration: none;
+}
 section {
   color: #f0fbff;
 }
