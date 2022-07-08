@@ -72,11 +72,10 @@ li::first-letter {
   margin: 40px -10px;
   font-size: large;
 }
-
-.denver-sun {
+#icon {
   position: relative;
-  top: 15px;
-  font-size: 44px;
+  left: -23px;
+  width: 75px;
 }
 #current-temp {
   max-width: 20px;
@@ -86,8 +85,8 @@ li::first-letter {
 
 .temprature-denver {
   position: relative;
-  top: 11px;
-  left: 27px;
+  top: 6px;
+  left: -30px;
   font-weight: 540;
   font-size: large;
 }
