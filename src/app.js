@@ -49,7 +49,7 @@ function locateMe(position) {
   let lon = position.coords.longitude;
   let lat = position.coords.latitude;
   let apiKey = "b20f16c775f1a540c9b26a281882d55c";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(showTemp);
 }
 function callLocateMe(event) {
@@ -58,7 +58,7 @@ function callLocateMe(event) {
 }
 function searchCity(city) {
   let apiKey = "b20f16c775f1a540c9b26a281882d55c";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(showTemp);
 }
 function searchLocation(event) {
