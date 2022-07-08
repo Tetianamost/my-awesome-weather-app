@@ -4,7 +4,12 @@ body {
   margin: 0;
   padding: 0;
 }
-
+li {
+  list-style: none;
+}
+li::first-letter {
+  text-transform: capitalize;
+}
 .main-box {
   border: 1px solid grey;
   border-radius: 5px;
@@ -13,8 +18,8 @@ body {
   padding: 35px;
   background: url("../media/nature-background.jpg");
   background-size: 1200px;
-  text-transform: capitalize;
 }
+
 .enter-city {
   position: relative;
   margin-top: 20px;
@@ -67,6 +72,7 @@ body {
   margin: 40px -10px;
   font-size: large;
 }
+
 .denver-sun {
   position: relative;
   top: 15px;
@@ -82,6 +88,8 @@ body {
   position: relative;
   top: 11px;
   left: 27px;
+  font-weight: 540;
+  font-size: large;
 }
 .weather-units {
   position: relative;
