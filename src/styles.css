@@ -89,17 +89,22 @@ li::first-letter {
 .weather-more {
   margin: 40px -10px;
 }
+.temp-now-icon {
+  position: relative;
+  left: 30px;
+  top: 9px;
+}
 #icon {
   position: relative;
   left: -37px;
-  width: 78px;
+  width: 60px;
 }
 #current-temp {
   position: relative;
   left: -52px;
   top: 8px;
   font-size: 36px;
-  font-weight: 450;
+  font-weight: bolder;
 }
 
 .weather-units {
