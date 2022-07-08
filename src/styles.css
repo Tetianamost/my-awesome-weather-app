@@ -125,6 +125,12 @@ li::first-letter {
 section {
   color: #f0fbff;
 }
+.weather-forecast-date {
+  opacity: 0.8;
+}
+.weather-forecast-temp-min {
+  opacity: 0.8;
+}
 .emoji {
   font-size: 30px;
 }
