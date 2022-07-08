@@ -48,11 +48,18 @@ li::first-letter {
 }
 .detail-line {
   text-decoration: underline #25527a;
+  font-size: 22px;
+  font-weight: 450;
+}
+.additional-units {
+  font-size: 19px;
+  font-weight: bolder;
 }
 .feels-like {
   position: relative;
   left: 27px;
 }
+
 .temp-dot {
   position: relative;
   left: 30px;
@@ -68,9 +75,17 @@ li::first-letter {
   transition: all 150ms solid;
   background: #347474;
 }
+.city-country {
+  font-size: 24px;
+  font-weight: bolder;
+}
+#current-date {
+  font-size: 20px;
+  font-weight: bolder;
+}
 .weather-more {
   margin: 40px -10px;
-  font-size: large;
+  /* font-size: large; */
 }
 #icon {
   position: relative;
@@ -80,15 +95,14 @@ li::first-letter {
 #current-temp {
   max-width: 20px;
   min-width: 10px;
-  font-size: 30px;
+  font-size: 29px;
+  font-weight: bolder;
 }
 
 .temprature-denver {
   position: relative;
   top: 6px;
   left: -30px;
-  font-weight: 540;
-  font-size: large;
 }
 .weather-units {
   position: relative;

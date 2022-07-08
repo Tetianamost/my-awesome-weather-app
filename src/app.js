@@ -25,6 +25,8 @@ function showTemp(response) {
   document.querySelector("#current-temp").innerHTML = Math.round(
     response.data.main.temp
   );
+  celciusTemp = response.data.main.temp;
+
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
   document.querySelector("#wind").innerHTML = Math.round(
@@ -64,22 +66,22 @@ function searchLocation(event) {
   let city = document.querySelector("#search-city").value;
   searchCity(city);
 }
-function convertCelcius(event) {
+function convertToCelcius(event) {
   event.preventDefault();
   let celcius = document.querySelector("#current-temp");
   let temp = celcius.innerHTML;
   temp = Number(temp);
   celcius.innerHTML = "23";
 }
-function convertFahrenheit(event) {
+function convertToFahrenheit(event) {
   event.preventDefault();
   let fahrenheit = document.querySelector("#current-temp");
   let temp = fahrenheit.innerHTML;
   temp = Number(temp);
-  fahrenheit.innerHTML = Math.round((temp * 9) / 5 + 32);
+  fahrenheit.innerHTML = Math.round((celciusTemp * 9) / 5 + 32);
 }
 
-searchCity("Denver");
+let celciusTemp = null;
 
 let searchCityButton = document.querySelector("#search-city");
 searchCityButton.addEventListener("submit", searchLocation);
@@ -93,7 +95,9 @@ let form = document.querySelector("#search-form", "#search");
 form.addEventListener("submit", searchLocation);
 
 let cLink = document.querySelector("#c-temp");
-cLink.addEventListener("click", convertCelcius);
+cLink.addEventListener("click", convertToCelcius);
 
 let fLink = document.querySelector("#f-temp");
-fLink.addEventListener("click", convertFahrenheit);
+fLink.addEventListener("click", convertToFahrenheit);
+
+searchCity("Denver");
