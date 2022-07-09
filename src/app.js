@@ -37,9 +37,9 @@ function showForecast(response) {
                 forecastDay.dt
               )}</div>
               
-                <img  src="http://openweathermap.org/img/wn/${
+                <img  src="./media/icons/${
                   forecastDay.weather[0].icon
-                }@2x.png" alt="" width="42"/>
+                }.svg" alt="" width="42"/>
                  <div class="weather-forecast-temp">
                   <span class="weather-forecast-temp-max">${Math.round(
                     forecastDay.temp.max
@@ -68,7 +68,6 @@ function showTemp(response) {
   document.querySelector("#current-temp").innerHTML = Math.round(
     response.data.main.temp
   );
-  celciusTemp = response.data.main.temp;
 
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
@@ -80,10 +79,7 @@ function showTemp(response) {
   );
   document
     .querySelector("#icon")
-    .setAttribute(
-      "src",
-      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-    );
+    .setAttribute("src", `./media/icons/${response.data.weather[0].icon}.svg`);
   document
     .querySelector("#icon")
     .setAttribute("alt", response.data.weather[0].description);
