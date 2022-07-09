@@ -58,7 +58,7 @@ function showForecast(response) {
 
 function getForecast(coordinates) {
   let apiKey = "b20f16c775f1a540c9b26a281882d55c";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(showForecast);
 }
 
@@ -93,7 +93,7 @@ function locateMe(position) {
   let lon = position.coords.longitude;
   let lat = position.coords.latitude;
   let apiKey = "b20f16c775f1a540c9b26a281882d55c";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(showTemp);
 }
 function callLocateMe(event) {
@@ -102,7 +102,7 @@ function callLocateMe(event) {
 }
 function searchCity(city) {
   let apiKey = "b20f16c775f1a540c9b26a281882d55c";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(showTemp);
 }
 function searchLocation(event) {
@@ -110,26 +110,6 @@ function searchLocation(event) {
   let city = document.querySelector("#search-city").value;
   searchCity(city);
 }
-function convertToCelcius(event) {
-  event.preventDefault();
-  let celcius = document.querySelector("#current-temp");
-  cLink.classList.add("active");
-  fLink.classList.remove("active");
-  let temp = celcius.innerHTML;
-  temp = Number(temp);
-  celcius.innerHTML = Math.round(celciusTemp);
-}
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let fahrenheit = document.querySelector("#current-temp");
-  cLink.classList.remove("active");
-  fLink.classList.add("active");
-  let temp = fahrenheit.innerHTML;
-  temp = Number(temp);
-  fahrenheit.innerHTML = Math.round((celciusTemp * 9) / 5 + 32);
-}
-
-let celciusTemp = null;
 
 let searchCityButton = document.querySelector("#search-city");
 searchCityButton.addEventListener("submit", searchLocation);
@@ -142,10 +122,30 @@ currentDate.innerHTML = formatDate(now);
 let form = document.querySelector("#search-form", "#search");
 form.addEventListener("submit", searchLocation);
 
-let cLink = document.querySelector("#c-temp");
-cLink.addEventListener("click", convertToCelcius);
-
-let fLink = document.querySelector("#f-temp");
-fLink.addEventListener("click", convertToFahrenheit);
-
 searchCity("Denver");
+
+// function convertToCelcius(event) {
+//   event.preventDefault();
+//   let celcius = document.querySelector("#current-temp");
+//   cLink.classList.add("active");
+//   fLink.classList.remove("active");
+//   let temp = celcius.innerHTML;
+//   temp = Number(temp);
+//   celcius.innerHTML = Math.round(celciusTemp);
+// }
+// function convertToFahrenheit(event) {
+//   event.preventDefault();
+//   let fahrenheit = document.querySelector("#current-temp");
+//   cLink.classList.remove("active");
+//   fLink.classList.add("active");
+//   let temp = fahrenheit.innerHTML;
+//   temp = Number(temp);
+//   fahrenheit.innerHTML = Math.round((celciusTemp * 9) / 5 + 32);
+// }
+
+// let celciusTemp = null;
+// let cLink = document.querySelector("#c-temp");
+// cLink.addEventListener("click", convertToCelcius);
+
+// let fLink = document.querySelector("#f-temp");
+// fLink.addEventListener("click", convertToFahrenheit);

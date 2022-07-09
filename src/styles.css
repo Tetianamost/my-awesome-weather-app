@@ -64,7 +64,7 @@ li::first-letter {
 
 .temp-dot {
   position: relative;
-  left: 30px;
+  left: 27px;
   top: -6px;
 }
 
@@ -114,8 +114,8 @@ li::first-letter {
 .weather-units {
   position: relative;
   font-size: 18px;
-  top: -7px;
-  left: -51px;
+  top: -4px;
+  left: -49px;
   min-width: fit-content;
 }
 .active {
