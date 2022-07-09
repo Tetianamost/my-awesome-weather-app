@@ -17,7 +17,8 @@ function formatDate(date) {
   });
   return `${currentDay} ${amPM}`;
 }
-function showForecast() {
+function showForecast(response) {
+  console.log(response.data.daily);
   let forecast = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Fri", "Sat", "Sun"];
@@ -36,6 +37,12 @@ function showForecast() {
 
   forecastHTML = forecastHTML + `</div>`;
   forecast.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "b20f16c775f1a540c9b26a281882d55c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showForecast);
 }
 
 function showTemp(response) {
@@ -63,6 +70,7 @@ function showTemp(response) {
   document
     .querySelector("#icon")
     .setAttribute("alt", response.data.weather[0].description);
+  getForecast(response.data.coord);
 }
 function locateMe(position) {
   let lon = position.coords.longitude;
@@ -122,7 +130,5 @@ cLink.addEventListener("click", convertToCelcius);
 
 let fLink = document.querySelector("#f-temp");
 fLink.addEventListener("click", convertToFahrenheit);
-
-showForecast();
 
 searchCity("Denver");
