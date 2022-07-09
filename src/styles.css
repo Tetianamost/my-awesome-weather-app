@@ -50,8 +50,7 @@ li::first-letter {
   background: #718393;
 }
 .detail-line {
-  text-decoration: underline #25527a;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 450;
 }
 .additional-units {
@@ -83,17 +82,20 @@ li::first-letter {
   font-weight: 540;
 }
 #current-date {
-  font-size: 20px;
-  font-weight: 530;
+  font-size: 18px;
+  font-weight: 540;
 }
 .weather-more {
   margin: 40px -10px;
+  background-color: rgb(116, 116, 128, 0.4);
+  border-radius: 5px;
 }
 .temp-now-icon {
   position: relative;
   left: 30px;
   top: 9px;
 }
+
 #icon {
   position: relative;
   left: -37px;
@@ -124,6 +126,8 @@ li::first-letter {
 }
 section {
   color: #f0fbff;
+  background-color: rgb(116, 116, 128, 0.4);
+  border-radius: 5px;
 }
 .weather-forecast-date {
   opacity: 0.8;
