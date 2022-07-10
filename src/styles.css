@@ -14,16 +14,34 @@ li::first-letter {
   text-transform: capitalize;
 }
 
-.main-box {
+.main-box,
+#background-images {
   border: 1px solid rgb(116, 116, 128, 0.4);
   border-radius: 5px;
   max-width: 600px;
   margin: 25px auto;
   padding: 35px;
-  background: url("../media/nature-background.jpg");
+  /* background: url("../media/background/day.jpg"); */
   background-size: 1200px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
 }
-
+.sunrise {
+  background: url("../media/background/sunrise.jpg");
+}
+.sunset {
+  background: url("../media/background/sunset.jpg");
+}
+.day {
+  background: url("../media/background/day.jpg");
+}
+.day .weather-more {
+  color: black;
+}
+.night {
+  background: url("../media/background/night.jpg");
+}
 .enter-city {
   position: relative;
   margin-top: 20px;
@@ -90,6 +108,7 @@ li::first-letter {
   margin: 40px -10px;
   background-color: rgb(116, 116, 128, 0.4);
   border-radius: 5px;
+  color: #f0fbff;
 }
 
 .temp-now-icon {

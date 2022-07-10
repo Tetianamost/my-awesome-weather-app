@@ -106,6 +106,20 @@ function searchLocation(event) {
   let city = document.querySelector("#search-city").value;
   searchCity(city);
 }
+function changeBackground() {
+  let date = new Date();
+  let day = date.getHours();
+  if (day >= 5 && day < 9) {
+    document.getElementById("background-images").className = "sunrise";
+  } else if (day >= 9 && day < 18) {
+    document.getElementById("background-images").className = "day";
+  } else if (day >= 18 && day < 20) {
+    document.getElementById("background-images").className = "sunset";
+  } else {
+    document.getElementById("background-images").className = "night";
+  }
+}
+changeBackground();
 
 let searchCityButton = document.querySelector("#search-city");
 searchCityButton.addEventListener("submit", searchLocation);
