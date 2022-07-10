@@ -115,7 +115,7 @@ function changeBackground() {
     document.getElementById("background-images").className = "sunrise";
   } else if (day >= 9 && day < 18) {
     document.getElementById("background-images").className = "day";
-  } else if (day >= 18 && day < 20) {
+  } else if (day >= 18 && day < 21) {
     document.getElementById("background-images").className = "sunset";
   } else {
     document.getElementById("background-images").className = "night";
@@ -127,9 +127,6 @@ function showAlerts(response) {
     alertsElement.style.backgroundColor = "#981f15";
     alertsHTML = `<div class="alert"> ⚠️ WEATHER ALERT: ${response.data.alerts[0].event} </div>`;
     alertsElement.innerHTML = alertsHTML;
-  } else {
-    alertsElement.innerHTML = "";
-    alertsElement.style.backgroundColor = "#fdf8f4";
   }
 }
 
@@ -151,9 +148,6 @@ function moreInfo(response) {
   if (response.data.alerts && response.data.alerts.length > 0) {
     alertInfo.style.backgroundColor = "rgb(152, 31, 20, 0.4)";
     alertInfo.innerHTML = response.data.alerts[0].description;
-  } else {
-    alertInfo.innerHTML = "";
-    alertInfo.style.backgroundColor = "#fdf8f4";
   }
 }
 
