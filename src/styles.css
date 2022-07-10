@@ -21,10 +21,8 @@ li::first-letter {
   max-width: 600px;
   margin: 25px auto;
   padding: 35px;
-  /* background: url("../media/background/day.jpg"); */
-  background-size: 1200px;
+  background-size: auto 749px;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-position: center center;
 }
 .sunrise {
