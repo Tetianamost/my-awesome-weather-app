@@ -84,6 +84,8 @@ function showTemp(response) {
     .querySelector("#icon")
     .setAttribute("alt", response.data.weather[0].description);
   getForecast(response.data.coord);
+  alertsCoords(response.data.coord);
+  moreInfoCoords(response.data.coord);
 }
 function locateMe(position) {
   let lon = position.coords.longitude;
@@ -119,6 +121,42 @@ function changeBackground() {
     document.getElementById("background-images").className = "night";
   }
 }
+function showAlerts(response) {
+  let alertsElement = document.querySelector("#alerts");
+  if (response.data.alerts && response.data.alerts.length > 0) {
+    alertsElement.style.backgroundColor = "#981f15";
+    alertsHTML = `<div class="alert"> ⚠️ WEATHER ALERT: ${response.data.alerts[0].event} </div>`;
+    alertsElement.innerHTML = alertsHTML;
+  } else {
+    alertsElement.innerHTML = "";
+    alertsElement.style.backgroundColor = "#fdf8f4";
+  }
+}
+
+function alertsCoords(coordinates) {
+  let apiKey = "b20f16c775f1a540c9b26a281882d55c";
+  let units = "imperial";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showAlerts);
+}
+function moreInfoCoords(coordinates) {
+  let apiKey = "b20f16c775f1a540c9b26a281882d55c";
+  let units = "imperial";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(moreInfo);
+}
+
+function moreInfo(response) {
+  let alertInfo = document.querySelector("#moreinfo");
+  if (response.data.alerts && response.data.alerts.length > 0) {
+    alertInfo.style.backgroundColor = "rgb(152, 31, 20, 0.4)";
+    alertInfo.innerHTML = response.data.alerts[0].description;
+  } else {
+    alertInfo.innerHTML = "";
+    alertInfo.style.backgroundColor = "#fdf8f4";
+  }
+}
+
 changeBackground();
 
 let searchCityButton = document.querySelector("#search-city");
