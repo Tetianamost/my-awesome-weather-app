@@ -37,9 +37,7 @@ li::first-letter {
 .noon .weather-more {
   color: black;
 }
-.before-sunset .weather-more {
-  color: #260069;
-}
+
 .before-sunset {
   background: url("../media/background/before-sunset.jpg");
 }
