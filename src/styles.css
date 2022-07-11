@@ -84,6 +84,7 @@ li::first-letter {
 #current-date {
   font-size: 18px;
   font-weight: 540;
+  opacity: 0.8;
 }
 .weather-more {
   margin: 40px -10px;
@@ -95,7 +96,14 @@ li::first-letter {
 .temp-now-icon {
   position: relative;
   left: 212px;
-  top: -2px;
+  top: -40px;
+}
+.last-updated {
+  opacity: 0.6;
+}
+#description {
+  opacity: 0.7;
+  font-size: larger;
 }
 
 #icon {
@@ -122,12 +130,14 @@ li::first-letter {
   position: relative;
   top: 1px;
   left: 18px;
-  font-size: 18px;
+  font-size: 16px;
+  margin: -32px 0;
+  opacity: 0.8;
 }
 .additional-units {
   position: relative;
   top: 1px;
-  left: 30px;
+  left: 24px;
   font-size: 23px;
 }
 #wind {
@@ -136,16 +146,15 @@ li::first-letter {
 }
 #mph {
   position: relative;
-  left: -7px;
+  left: 20px;
+  font-size: smaller;
+}
+.wind-feels-like {
+  position: relative;
+  top: -122px;
+  left: 296px;
 }
 
-.active {
-  cursor: default;
-  color: rgb(33, 33, 33);
-}
-.active:hover {
-  text-decoration: none;
-}
 section {
   color: #f0fbff;
   background-color: rgb(116, 116, 128, 0.4);
