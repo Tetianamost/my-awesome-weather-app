@@ -34,12 +34,14 @@ li::first-letter {
 .noon {
   background: url("../media/background/noon.jpg");
 }
-.noon .weather-more {
+.noon,
+.before-sunset .weather-more {
   color: black;
 }
 .before-sunset {
   background: url("../media/background/before-sunset.jpg");
 }
+
 .sunset {
   background: url("../media/background/sunset.jpg");
 }
@@ -113,8 +115,9 @@ li::first-letter {
 
 .temp-now-icon {
   position: relative;
-  left: 212px;
-  top: -40px;
+  left: 160px;
+  top: -10px;
+  max-width: fit-content;
 }
 .last-updated {
   opacity: 0.6;
@@ -169,8 +172,8 @@ li::first-letter {
 }
 .wind-feels-like {
   position: relative;
-  top: -122px;
-  left: 296px;
+  top: 45px;
+  left: 19px;
 }
 
 section {
