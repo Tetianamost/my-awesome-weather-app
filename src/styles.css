@@ -72,17 +72,26 @@ li::first-letter {
 }
 .search-button:hover {
   background: #718393;
+  transition: all 150ms solid;
 }
-
+.search-button:focus {
+  background-color: #fafafa;
+  color: #38729f;
+}
 .current {
   position: relative;
   left: -80px;
   background: #d7d1b9;
   border-style: none;
+  transition: all 150ms solid;
 }
 .current:hover {
   transition: all 150ms solid;
   background: #347474;
+}
+.current:focus {
+  background: #d7d1b9;
+  color: black;
 }
 .city-country {
   font-size: 24px;
