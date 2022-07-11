@@ -115,7 +115,7 @@ li::first-letter {
 
 .temp-now-icon {
   position: relative;
-  left: 160px;
+  left: 38px;
   top: -10px;
   max-width: fit-content;
 }
@@ -172,8 +172,7 @@ li::first-letter {
 }
 .wind-feels-like {
   position: relative;
-  top: 45px;
-  left: 19px;
+  top: 1px;
   box-sizing: border-box;
 }
 
