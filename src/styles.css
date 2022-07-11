@@ -173,6 +173,7 @@ li::first-letter {
 .wind-feels-like {
   position: relative;
   top: 1px;
+  right: 35px;
   box-sizing: border-box;
 }
 
