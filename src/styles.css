@@ -70,14 +70,15 @@ li::first-letter {
   background-color: #fafafa;
   transition: all 150ms solid;
 }
-.search-button:hover {
-  background: #718393;
-  transition: all 150ms solid;
-}
 .search-button:focus {
   background-color: #fafafa;
   color: #38729f;
 }
+.search-button:hover {
+  background: #718393;
+  transition: all 150ms solid;
+}
+
 .current {
   position: relative;
   left: -80px;
@@ -85,14 +86,15 @@ li::first-letter {
   border-style: none;
   transition: all 150ms solid;
 }
-.current:hover {
-  transition: all 150ms solid;
-  background: #347474;
-}
 .current:focus {
   background: #d7d1b9;
   color: black;
 }
+.current:hover {
+  transition: all 150ms solid;
+  background: #347474;
+}
+
 .city-country {
   font-size: 24px;
   font-weight: 540;
