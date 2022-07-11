@@ -155,8 +155,6 @@ function moreInfo(response) {
   }
 }
 
-changeBackground();
-
 let searchCityButton = document.querySelector("#search-city", "#search");
 searchCityButton.addEventListener("submit", searchLocation);
 document.querySelector("#search").addEventListener("click", searchLocation);
@@ -170,6 +168,7 @@ let form = document.querySelector("#search-form", "#search");
 form.addEventListener("submit", searchLocation);
 
 searchCity("Denver");
+changeBackground();
 
 // function convertToCelcius(event) {
 //   event.preventDefault();
