@@ -115,7 +115,7 @@ li::first-letter {
 
 .temp-now-icon {
   position: relative;
-  left: 85px;
+  left: 150px;
   top: -10px;
   max-width: fit-content;
 }
