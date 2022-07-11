@@ -113,8 +113,12 @@ function changeBackground() {
   let day = date.getHours();
   if (day >= 5 && day < 9) {
     document.getElementById("background-images").className = "sunrise";
-  } else if (day >= 9 && day < 18) {
-    document.getElementById("background-images").className = "day";
+  } else if (day >= 9 && day < 12) {
+    document.getElementById("background-images").className = "before-noon";
+  } else if (day >= 12 && day < 15) {
+    document.getElementById("background-images").className = "noon";
+  } else if (day >= 15 && day < 18) {
+    document.getElementById("background-images").className = "before-sunset";
   } else if (day >= 18 && day < 21) {
     document.getElementById("background-images").className = "sunset";
   } else {

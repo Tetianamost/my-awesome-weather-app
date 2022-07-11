@@ -28,15 +28,22 @@ li::first-letter {
 .sunrise {
   background: url("../media/background/sunrise.jpg");
 }
+.before-noon {
+  background: url("../media/background/before-noon.jpg");
+}
+.noon {
+  background: url("../media/background/noon.jpg");
+}
+.noon .weather-more {
+  color: black;
+}
+.before-sunset {
+  background: url("../media/background/before-sunset.jpg");
+}
 .sunset {
   background: url("../media/background/sunset.jpg");
 }
-.day {
-  background: url("../media/background/day.jpg");
-}
-.day .weather-more {
-  color: black;
-}
+
 .night {
   background: url("../media/background/night.jpg");
 }
