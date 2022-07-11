@@ -66,23 +66,6 @@ li::first-letter {
 .search-button:hover {
   background: #718393;
 }
-.detail-line {
-  font-size: 18px;
-  font-weight: 450;
-}
-.additional-units {
-  font-size: 26px;
-}
-.feels-like {
-  position: relative;
-  left: 27px;
-}
-
-.temp-dot {
-  position: relative;
-  left: 27px;
-  top: -6px;
-}
 
 .current {
   position: relative;
@@ -101,6 +84,7 @@ li::first-letter {
 #current-date {
   font-size: 18px;
   font-weight: 540;
+  opacity: 0.8;
 }
 .weather-more {
   margin: 40px -10px;
@@ -111,8 +95,15 @@ li::first-letter {
 
 .temp-now-icon {
   position: relative;
-  left: -124px;
-  top: -13px;
+  left: 212px;
+  top: -40px;
+}
+.last-updated {
+  opacity: 0.6;
+}
+#description {
+  opacity: 0.7;
+  font-size: larger;
 }
 
 #icon {
@@ -122,7 +113,7 @@ li::first-letter {
 }
 #current-temp {
   position: relative;
-  left: -52px;
+  right: 29px;
   top: 8px;
   font-size: 36px;
   font-weight: bolder;
@@ -131,17 +122,39 @@ li::first-letter {
 .weather-units {
   position: relative;
   font-size: 18px;
-  top: -4px;
-  left: -49px;
+  top: -5px;
+  left: -22px;
   min-width: fit-content;
 }
-.active {
-  cursor: default;
-  color: rgb(33, 33, 33);
+.detail-line {
+  position: relative;
+  top: 1px;
+  left: 18px;
+  font-size: 16px;
+  margin: -32px 0;
+  opacity: 0.8;
 }
-.active:hover {
-  text-decoration: none;
+.additional-units {
+  position: relative;
+  top: 1px;
+  left: 24px;
+  font-size: 23px;
 }
+#wind {
+  position: relative;
+  left: 23px;
+}
+#mph {
+  position: relative;
+  left: 20px;
+  font-size: smaller;
+}
+.wind-feels-like {
+  position: relative;
+  top: -122px;
+  left: 296px;
+}
+
 section {
   color: #f0fbff;
   background-color: rgb(116, 116, 128, 0.4);

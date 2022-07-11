@@ -153,8 +153,9 @@ function moreInfo(response) {
 
 changeBackground();
 
-let searchCityButton = document.querySelector("#search-city");
+let searchCityButton = document.querySelector("#search-city", "#search");
 searchCityButton.addEventListener("submit", searchLocation);
+document.querySelector("#search").addEventListener("click", searchLocation);
 
 let myCityButton = document.querySelector("#current-city");
 myCityButton.addEventListener("click", callLocateMe);
