@@ -75,6 +75,7 @@ li::first-letter {
 .search-button:focus {
   background-color: #fafafa;
   color: #38729f;
+  border-color: #8bb0c0;
 }
 .search-button:hover {
   background: #718393;
