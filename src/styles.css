@@ -18,7 +18,7 @@ li::first-letter {
 #background-images {
   border: 1px solid rgb(116, 116, 128, 0.4);
   border-radius: 5px;
-  max-width: 500px;
+  max-width: 600px;
   margin: 25px auto;
   padding: 35px;
   background-size: auto 749px;
